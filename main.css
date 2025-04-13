@@ -1,719 +1,485 @@
-@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Itim&family=Lilita+One&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Merienda:wght@300..900&family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Itim&family=Lilita+One&family=Lora:ital,wght@0,400..700;1,400..700&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Merienda:wght@300..900&family=Pacifico&display=swap');
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-header div {
-    max-width: 100%;
-    text-align: center;
-    padding: 15px;
-    font-family: "Lilita One", sans-serif;
-    background-color: #ebe9e9d9;
-    border: 1px solid black;
-    position: sticky;
-    top: 0;
-    /* z-index: 100; */
+body {
+  line-height: 1.6;
 }
 
-.pages a {
-    text-decoration: none;
-    padding: 15px;
+/* Header */
+.welcome-message {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 1.1rem;
 }
 
-nav div img {
-    width: 90px;
-    position: relative;
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
-.school_name {
-    display: flex;
-    flex-direction: column;
-    color: red;
+.logo img {
+  width: 60px;
+  height: auto;
 }
 
-div ul {
-    
-    list-style: none;
-    display: flex;
-    
+.school_name h1 {
+  font-size: 1.5rem;
+  color: #333;
 }
 
-div ul li {
-    
-    list-style: none;
+.school_name h2 {
+  font-size: 1rem;
+  color: #666;
 }
 
-nav {
-    display: flex;
-    max-width: 100%;
-    margin: auto;
-    justify-content: space-between;
-    align-items: center;
-    height: 90px;
+.menu {
+  display: flex;
+  align-items: center;
 }
 
-.all {
-    /* display: flex; */
-    /* justify-content: space-between; */
-    /* align-items: center; */
-    background-color: brown;
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+.menu ul {
+  display: flex;
+  list-style: none;
 }
 
-* {
-    box-sizing: border-box;
+.menu ul li {
+  margin: 0 15px;
 }
 
+.menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+  color: #007bff;
+}
+
+.search form {
+  display: flex;
+  align-items: center;
+}
+
+.search input {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 3px 0 0 3px;
+}
+
+.search button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 2px 0;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger Animation */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Slideshow */
 .first {
-    /* display: flex;
-    justify-content: center;
-    max-width: 70vw;
-    margin: auto;
-    color: white;
-    align-items: center; */
-    position: relative;
-}
-
-.note img {
-    width: 100%;
-    position: relative;
+  margin-top: 80px; /* Adjust for fixed navbar */
+  position: relative;
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
 }
 
 .mySlides {
-    position: absolute;
-    top: 40px;
-    display: none;
-    max-width: 1000px;
-    margin-left: 300px;
+  display: none;
 }
 
 .mySlides img {
-    width: 100%;
-
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
-/* .note {
-    position: relative;
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
 }
 
-.note img {
-    width: 100%;
+.active, .dot:hover {
+  background-color: #717171;
 }
 
-.mySlides { */
-/* display: none; */
-/* max-width: 1000px;
-    margin: auto;
-    position: relative;
-    top: 30px;
-}
-
-img {
-    position: absolute;
-
-} */
-
-/* Number text (1/3 etc) */
-/* .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-} */
-
-/* The dots/bullets/indicators */
-/* .dot {
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-} */
-
-.active {
-    background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-    animation: fade ease-in-out infinite;
-}
-
-@keyframes fade {
-    from {
-        opacity: 0
-    }
-
-    to {
-        opacity: 1
-    }
-}
-
-/* On smaller screens, decrease text size */
-/* @media only screen and (max-width: 300px) {
-    .text {
-        font-size: 11px
-    }
-} */
-.seperation1 {
-    top: -4px;
-    height: 8px;
-    background-color: rgb(151 47 106);
-    position: relative;
-}
-
+/* About Section */
 .about {
-    background-color: #d3c8c857;
-    text-align: center;
-    padding: 0 170px 50px 170px;
-    text-align: justify;
-    top: -4px;
-    position: relative;
-    border-bottom: 1px solid rgb(219, 204, 204);
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.about_head{
-    font-size: 30px;
-    padding-top: 50px ;
-    padding-bottom: 30px;
+.about_head {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 20px;
 }
 
-.about p{
-     font-size: 21px;
-     font-family: "Itim", cursive;
-     font-weight: 400;
-     font-style: normal;
+.about p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
 }
 
-
-/* 2nd Slideshow container */
+/* Second Slideshow */
 .slideshow-container1 {
-    position: relative;
-    background: #33298b;
-    height: 280px;
-    top: -4px;
+  max-width: 1000px;
+  margin: 40px auto;
+  position: relative;
 }
 
-/* Slides */
 .mySlides1 {
-    display: none;
-    text-align: center;
-    padding: 0 200px 50px 200px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  text-align: center;
 }
 
-.mySlides1 q{
-    font-family: "Lora", serif ;
-    font-size: 20px;
-    color: white;
-    font-weight: 400;
+.mySlides1 q {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #333;
 }
 
-.author1{
-    font-family: "Lora", serif;
-    color: white;
-    font-weight: bolder;
-    font-size: 25px;
-    padding-top: 50px;
-    padding-bottom: 30px;
+.author1 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #007bff;
 }
 
-/* Next & previous buttons */
 .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -30px;
-    padding: 16px;
-    color: #888;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  padding: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  user-select: none;
 }
 
-/* Position the "next button" to the right */
+.prev {
+  left: 0;
+}
+
 .next {
-    position: absolute;
-    right: 0;
-    border-radius: 3px 0 0 3px;
+  right: 0;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-}
-
-/* The dot/bullet/indicator container */
 .dot-container1 {
-    text-align: center;
-    padding: 20px;
-    background: #ddd;
+  text-align: center;
+  margin-top: 20px;
 }
 
-/* The dots/bullets/indicators */
 .dot1 {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
 }
 
-/* Add a background color to the active dot/circle */
-.active,
-.dot1:hover {
-    background-color: #717171;
+.dot1.active, .dot1:hover {
+  background-color: #007bff;
 }
 
-/* Add an italic font style to all quotes */
-q {
-    font-style: italic;
+/* Guide Section */
+.guide {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
 }
 
-.guide{
-    display: flex;
-    max-width: 100%;
-    margin: auto;
-    justify-content:space-evenly;
-    align-items: center;
-    padding-top: 30px;
+.guide img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-.guide img{
-    width: 13%;
+.guide-name, .guide-role {
+  display: flex;
+  justify-content: center;
+  gap: 170px;
+  text-align: center;
 }
 
-.guide-name{
-    display: flex;
-    max-width: 100%;
-    justify-content:space-evenly;
-    align-items: center;
-    padding-top: -10px;
+.guide-name h2 {
+  font-size: 1.5rem;
+  color: #333;
 }
 
-.guide-name :nth-child(2){
-    padding-right: 20px;
-
-}
-.guide-role{
-    display: flex;
-    max-width: 100%;
-    justify-content:space-evenly;
-    justify-items: 60px;
-    /* align-items: center; */
-    padding-top: -10px;
-    font-size: 15px;
-   
+.guide-role h4 {
+  font-size: 1rem;
+  color: #666;
 }
 
-.guide-role :nth-child(2){
-  padding-right: 15px;
-  font-weight: lighter;
+/* Contact Section */
+.box-out {
+  background-color: #f4f4f4;
+  padding: 40px 20px;
 }
 
-.guide-role :nth-child(1){
-    padding-right: 70px;
-    font-weight: lighter;
+.box-in {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
-.seperation2{
-    position: relative;
-    top: 30px;
-    height: 100px;
-    background-color: #33298b;
+.box-left, .box-center, .box-right {
+  flex: 1;
+  min-width: 250px;
+  padding: 20px;
 }
 
-.seperation3{
-    position: relative;
-    height: 800px;
-    background-color: #100e1d;
+.contact {
+  font-size: 1.8rem;
+  color: #007bff;
+  margin-bottom: 20px;
 }
 
-.below {
-
+.address, .email, .phone {
+  margin-bottom: 20px;
 }
 
-.box-right{
-    width: 20%;
+.symbol {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
+.symbol i {
+  font-size: 1.2rem;
+  color: #007bff;
+  margin-right: 10px;
+}
+
+.topic {
+  font-weight: bold;
+  color: #333;
+}
+
+.text-one, .text-two {
+  color: #555;
+}
+
+.box-center {
+  text-align: center;
+}
+
+.center-img {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.links i {
+  font-size: 1.5rem;
+  margin: 0 10px;
+  color: #333;
+  cursor: pointer;
+}
+
+.links i:hover {
+  color: #007bff;
+}
+
+.box-right h3 {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 20px;
+}
 
 .bottom_pages ul {
-    display: flex;
-    flex-direction: column;
+  list-style: none;
 }
 
-.bottom_pages li {
-    
+.bottom_pages ul li {
+  margin-bottom: 10px;
 }
 
-.bottom_pages a {
-    text-decoration: none;
+.bottom_pages ul li a {
+  text-decoration: none;
+  color: #333;
 }
 
-.box-out{
-    background-image: url(../assets/images/footer\ image.jpg);
-    padding: 40px 0 40px 0;
-    background-size: cover;
+.bottom_pages ul li a:hover {
+  color: #007bff;
 }
 
-.box-left{
-    width: 20%;
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9rem;
 }
 
-.contact{
-    font-size: 30px;
-    font-weight: 400;
-}
-
-.box-in{
-    display: flex;
-}
-
-.symbol{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.box-center{
-    width: 20%;
-}
-
-.center-img{
-    width: 200px;
-}
-
-.links{
-    display: flex;
-}
-
-footer{
-    background-color: #454545;
-    color: white;
-    font-size: 20px;
-    padding: 30px 0;
-    text-align: center;
-}
-
-
-
-
-
-
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Header Styling */
-  header {
-    background-color: #2c3e50;
-    color: #ec1212;
-    padding: 10px 0;
-    text-align: center;
-    font-size: 1.2rem;
-  }
-  
-  .welcome-message {
-    font-size: 1.1rem;
-    font-weight: bold;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-  }
-  
-  /* Navbar Styling */
+/* Responsive Design */
+@media (max-width: 768px) {
   .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #34495e;
-    padding: 10px 20px;
-    height: 80px; /* Set a fixed height for the navbar */
+    flex-wrap: wrap;
+    padding: 10px;
   }
-  
+
   .logo img {
-    height: 100%; /* Make the logo fill the height of the navbar */
-    object-fit: contain; /* Ensure the aspect ratio of the logo is maintained */
-    transform: translateY(-5px); /* Moves the logo up */
+    width: 50px;
   }
-  
-  .school_name {
-    color: #fff;
+
+  .school_name h1 {
+    font-size: 1.2rem;
+  }
+
+  .school_name h2 {
+    font-size: 0.9rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu.active {
+    display: block;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .menu ul li {
+    margin: 10px 0;
+  }
+
+  .search {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .search form {
+    width: 100%;
+  }
+
+  .search input {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .search button {
+    padding: 8px 12px;
+  }
+
+  .first {
+    margin-top: 120px; /* Adjust for taller navbar on mobile */
+  }
+
+  .guide {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .guide-name, .guide-role {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .box-in {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box-left, .box-center, .box-right {
+    width: 100%;
     text-align: center;
   }
-  
-  .school_name h1 {
-    font-size: 2rem;
-    margin: 0;
-  }
-  
-  .school_name h2 {
-    font-size: 1.2rem;
-    margin-top: 5px;
-  }
-  
-  .menu ul {
-    display: flex;
-    list-style-type: none;
-  }
-  
-  .menu ul li {
-    margin: 0 15px;
-  }
-  
-  .menu ul li a {
-    color: #ecf0f1;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-  }
-  
-  .menu ul li a:hover {
-    color: #1abc9c;
-  }
-  
-  /* Search Form Styling */
-  .search form {
-    display: flex;
-    align-items: center;
-  }
-  
-  .search input[type="search"] {
-    padding: 8px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    margin-right: 10px;
-  }
-  
-  .search button {
-    background-color: #1abc9c;
-    border: none;
-    border-radius: 5px;
-    padding: 8px;
-    cursor: pointer;
-  }
-  
-  .search button i {
-    color: white;
-    font-size: 1rem;
-  }
-  
-  .search button:hover {
-    background-color: #16a085;
-  }
-  
 
-
-
-
-
-
- /* General Reset 2 */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', Arial, sans-serif; /* Modern, professional font */
-  }
-  
-  body {
-    background-color: #f4f7f6; /* Light background for a clean look */
-    color: #333; /* Dark gray text for better readability */
-    line-height: 1.6;
-  }
-  
-  /* Box Container */
-  .box-out {
-    display: flex;
-    justify-content: center;
-    padding: 40px 20px;
-    background-color: #ffffff; /* White background to contrast with page background */
-  }
-  
-  /* Box Inside Layout */
-  .box-in {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    width: 100%;
-    flex-wrap: wrap; /* Ensure content wraps on smaller screens */
-    align-items: flex-start; /* Align items at the start to avoid breaking */
-  }
-  
-  /* Left Section (Contact Info) */
-  .box-left {
-    flex: 1;
-    padding: 20px;
-    font-size: 1rem;
-    text-align: center; /* Center all text inside the contact section */
-    max-width: 400px; /* Limit max width for proper alignment */
-    margin-right: 20px; /* Space between the left and center sections */
-  }
-  
-  .contact {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #2c3e50;
-    margin-bottom: 20px;
-    text-align: center; /* Ensure the contact heading is centered */
-  }
-  
-  .address, .email, .phone {
-    margin-bottom: 20px;
-    text-align: center; /* Ensure all sub-points under contact are centered */
-  }
-  
   .symbol {
-    display: inline-flex; /* Align icon and text horizontally */
-    align-items: center;
     justify-content: center;
-    margin-bottom: 10px;
   }
-  
-  .symbol i {
-    color: #1abc9c;
-    font-size: 1.3rem;
-    margin-right: 10px;
+}
+
+@media (max-width: 480px) {
+  .welcome-message {
+    font-size: 0.9rem;
   }
-  
-  .topic {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #34495e;
-  }
-  
-  .text-one, .text-two {
-    font-size: 1rem;
-    color: #7f8c8d;
-    margin-left: 0; /* Remove left margin for centering */
-    margin-top: 5px; /* Small spacing between lines */
-  }
-  
-  /* Center Section (Image and Social Media Links) */
-  .box-center {
-    flex: 1;
-    text-align: center; /* Center the content in the middle */
-    padding: 20px;
-  }
-  
-  .center-img {
-    max-width: 200px;
-    margin-bottom: 20px; /* Space between the image and social icons */
-  }
-  
-  .links {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .links i {
-    font-size: 2.5rem; /* Increase the size of social media icons */
-    color: #1abc9c;
-    margin: 0 15px; /* Space out icons */
-    transition: color 0.3s ease;
-  }
-  
-  .links i:hover {
-    color: #34495e; /* Change color on hover */
-  }
-  
-  /* Right Section (Useful Links) */
-  .box-right {
-    flex: 1;
-    padding: 20px;
-    text-align: center; /* Center the links */
-    max-width: 400px; /* Limit max width for proper alignment */
-    margin-left: 20px; /* Space between the center and right sections */
-  }
-  
-  .below {
+
+  .about_head {
     font-size: 1.5rem;
-    font-weight: 600;
-    color: #2c3e50;
-    margin-bottom: 20px;
   }
-  
-  .bottom_pages ul {
-    list-style: none;
-    padding-left: 0;
-    text-align: center; /* Center the links */
+
+  .mySlides1 q {
+    font-size: 1rem;
   }
-  
-  .bottom_pages ul li {
-    margin-bottom: 10px;
+
+  .guide img {
+    width: 120px;
+    height: 120px;
   }
-  
-  .bottom_pages ul li a {
-    font-size: 1.1rem;
-    text-decoration: none;
-    color: #7f8c8d;
-    transition: color 0.3s ease;
-  }
-  
-  .bottom_pages ul li a:hover {
-    color: #1abc9c; /* Color change on hover */
-  }
-  
-  /* Media Queries for Responsiveness */
-  @media (max-width: 768px) {
-    .box-in {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .box-left, .box-center, .box-right {
-      flex: none;
-      width: 100%;
-      text-align: center;
-      margin: 0; /* Remove margins on smaller screens */
-    }
-  
-    .center-img {
-      max-width: 150px;
-    }
-  
-    .links i {
-      font-size: 2rem; /* Adjust the size of icons for smaller screens */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .contact, .below {
-      font-size: 1.2rem;
-    }
-  
-    .text-one, .text-two, .bottom_pages ul li a {
-      font-size: 0.9rem;
-    }
-  
-    .links i {
-      font-size: 2rem; /* Ensure social icons are large enough on smaller screens */
-    }
-  }
-  
-  
-  
-  
+}
