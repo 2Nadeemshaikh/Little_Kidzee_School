@@ -560,6 +560,15 @@ footer {
   .hero {
     margin-bottom: 50px; /* Space between hero and slideshow */
     margin-top: 100px; /* Space for header and navbar */
+    justify-content: stretch;
+  }
+
+.welcome-message {
+    text-align: center;
+    padding: 15px;
+    font-size: 15px;
+    font-weight: 600;
+    animation: fadeInDown 1s ease;
   }
 
   .slideshow {
@@ -569,17 +578,8 @@ footer {
 
 @media (max-width: 1024px) {
 
-  .welcome-message {
-    text-align: center;
-    padding: 15px;
-    font-size: 15px;
-    font-weight: 600;
-    animation: fadeInDown 1s ease;
-  }
-
   .navbar {
     flex-wrap: wrap;
-    justify-content: stretch;
     padding: 10px 20px;
   }
 
