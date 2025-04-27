@@ -568,6 +568,15 @@ footer {
 }
 
 @media (max-width: 1024px) {
+
+  .welcome-message {
+    text-align: center;
+    padding: 15px;
+    font-size: 15px;
+    font-weight: 600;
+    animation: fadeInDown 1s ease;
+  }
+
   .navbar {
     flex-wrap: wrap;
     justify-content: stretch;
