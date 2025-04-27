@@ -570,6 +570,7 @@ footer {
 @media (max-width: 1024px) {
   .navbar {
     flex-wrap: wrap;
+    justify-content: stretch;
     padding: 10px 20px;
   }
 
